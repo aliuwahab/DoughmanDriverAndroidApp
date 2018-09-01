@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2">
+
+                <com.google.android.gms.maps.MapView
+                    android:id="@+id/map_view_order_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </com.google.android.gms.maps.MapView>
+
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/message_image_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:src="@drawable/message" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:text="Notify" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/call_image_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:src="@drawable/call"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:text="Call" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/more_options_button_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:src="@drawable/more"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:text="Options" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <!--Begining Order Location and Number Holding View-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/order_details_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Card Title"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/order_details_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sample_card_content"
+                    android:textColor="#555" />
+
+            </LinearLayout>
+            <!--End of Order Location and Number Holding View-->
+
+
+            <!--Begining Cash and Time Holding View-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/order_cost_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order Amount"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/order_cost_title"
+                        android:text="GHC 200"
+                        android:textColor="#555"
+                        android:gravity="center"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/delivery_time_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Remaining Time"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/delivery_time_title"
+                        android:text="50 MIN"
+                        android:textColor="#555"
+                        android:gravity="center"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <!--End of Cash and Time Holding View-->
+
+
+            <!--Arrive Button Container-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Arrived to customer"
+                    android:theme="@style/Widget.AppCompat.Button" />
+
+            </LinearLayout>
+
+
+            <!--Bottom Menu-->
+            <LinearLayout
+                android:id="@+id/linear_layout_order_details_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_skip_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Skip"
+                    android:theme="@style/Widget.AppCompat.Button" />
+
+                <Button
+                    android:id="@+id/button_cancel_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cancel"
+                    android:theme="@style/Widget.AppCompat.Button" />
+
+                <Button
+                    android:id="@+id/button_order_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Details"
+                    android:theme="@style/Widget.AppCompat.Button" />
+
+                <Button
+                    android:id="@+id/button_order_navigation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Navigate"
+                    android:theme="@style/Widget.AppCompat.Button" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
+
+
+
+
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:orientation="vertical"-->
+    <!--android:background="@color/identity_white"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:layout_marginBottom="5dp">-->
+    <!--<ImageView-->
+        <!--android:background="@color/identity_extra_light_text"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="UNKNOWN_DATA_0x100"-->
+        <!--android:contentDescription="@string/content_description" />-->
+    <!--<LinearLayout-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="UNKNOWN_DATA_0x3201">-->
+        <!--<FrameLayout android:layout_width="UNKNOWN_DATA_0x3c01"-->
+            <!--android:layout_height="UNKNOWN_DATA_0x3201">-->
+            <!--<ImageView-->
+                <!--android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"-->
+                <!--android:background="@color/identity_grey_light2"-->
+                <!--android:layout_width="UNKNOWN_DATA_0x601"-->
+                <!--android:layout_height="UNKNOWN_DATA_0x1901"-->
+                <!--android:contentDescription="@string/content_description" />-->
+            <!--<ImageView-->
+                <!--android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"-->
+                <!--android:background="@drawable/order_big_bullet_outer"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:contentDescription="@string/content_description" />-->
+            <!--<ImageView-->
+                <!--android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"-->
+                <!--android:id="@+id/delivery_header_bullet"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:contentDescription="@string/content_description"-->
+                <!--android:scaleX="@integer/text_icon_scale" />-->
+        <!--</FrameLayout>-->
+        <!--<com.av.ol.utils.MyTextView-->
+            <!--android:textSize="20sp"-->
+            <!--android:textColor="@color/black_total"-->
+            <!--android:ellipsize="end"-->
+            <!--android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"-->
+            <!--android:layout_gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"-->
+            <!--android:id="@+id/restaurant_name"-->
+            <!--android:layout_width="UNKNOWN_DATA_0x1"-->
+            <!--android:layout_height="UNKNOWN_DATA_0x3201"-->
+            <!--android:maxLines="1"-->
+            <!--android:layout_weight="1.0"-->
+            <!--android:customFont="Montserrat-Regular.otf" />-->
+        <!--<LinearLayout-->
+            <!--android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:id="@+id/navigate_wrapper"-->
+            <!--android:padding="10dp"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent">-->
+            <!--<com.av.ol.utils.MyTextView-->
+                <!--android:textSize="12sp"-->
+                <!--android:textColor="@color/black_50"-->
+                <!--android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"-->
+                <!--android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"-->
+                <!--android:id="@+id/delivery_id"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:customFont="Montserrat-Regular.otf" />-->
+            <!--<com.av.ol.utils.MyTextView-->
+                <!--android:textSize="12sp"-->
+                <!--android:textColor="@color/black_50"-->
+                <!--android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:paddingLeft="5dp" app:layout_width="wrap_content" app:layout_height="wrap_content" app:text="@string/icon_navigate" app:customFont="orderlord-mobile.ttf" />-->
+        <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/orders_recycler_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" />-->
+    <!--<FrameLayout-->
+        <!--android:id="@+id/slide_to_unlock_wrapper"-->
+        <!--android:background="@color/identity_white"-->
+        <!--android:paddingLeft="10dp"-->
+        <!--android:paddingRight="10dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="UNKNOWN_DATA_0x3c01">-->
+        <!--<LinearLayout-->
+            <!--android:layout_gravity="top|bottom|center_vertical|fill_vertical|center|fill"-->
+            <!--android:background="@drawable/slider_green"-->
+            <!--android:paddingTop="2dp"-->
+            <!--android:paddingBottom="2dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+            <!--<com.av.ol.utils.SlideToUnlock-->
+                <!--android:layout_gravity="top|bottom|center_vertical|fill_vertical|center|fill"-->
+                <!--android:id="@+id/start_slider"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="UNKNOWN_DATA_0x2801" />-->
+        <!--</LinearLayout>-->
+    <!--</FrameLayout>-->
+    <!--<ImageView-->
+        <!--android:background="@color/identity_extra_light_text"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="UNKNOWN_DATA_0x100"-->
+        <!--android:contentDescription="@string/content_description" />-->
+<!--</LinearLayout>-->

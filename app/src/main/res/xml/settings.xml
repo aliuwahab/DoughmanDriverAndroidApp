@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="permission_for_play_services"
+        android:summaryOff="Disabled"
+        android:summaryOn="Enabled"
+        android:title="Turn On Play Services">
+    </CheckBoxPreference>
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="permission_for_gps"
+        android:summaryOff="Disabled"
+        android:summaryOn="Enabled"
+        android:title="GPS Services">
+    </CheckBoxPreference>
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="permission_for_map_navigation"
+        android:summaryOff="Disabled"
+        android:summaryOn="Enabled"
+        android:title="Enable Map Navigation">
+    </CheckBoxPreference>
+
+
+
+
+
+</PreferenceScreen>

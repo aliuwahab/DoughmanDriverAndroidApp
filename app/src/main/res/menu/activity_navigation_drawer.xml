@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/orders"
+            android:icon="@drawable/outline_view_list_24px"
+            android:title="Orders" />
+        <item
+            android:id="@+id/delivery_history"
+            android:icon="@drawable/outline_history_24px"
+            android:title="Delivery History" />
+    </group>
+
+
+
+    <item android:title="User Account Actions">
+        <menu>
+            <item
+                android:id="@+id/settings"
+                android:icon="@drawable/outline_settings_24px"
+                android:title="Settings" />
+
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/user"
+                android:title="Log Out" />
+        </menu>
+    </item>
+
+
+    <!--This is group is for testing intents-->
+    <item android:title="Testing Activities">
+        <menu>
+            <item
+                android:id="@+id/login_activity"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Login Activity" />
+        </menu>
+    </item>
+
+</menu>
